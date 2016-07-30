@@ -335,6 +335,7 @@
      * Sets the global config options for "foreach" partial.
      *
      * @function setOptions
+     * @memberOf foreach
      *
      * @param {object}  [options]                     The object, which contains the config options.
      *
@@ -360,6 +361,7 @@
      * Gets the global config options for "foreach" partial.
      *
      * @function getOptions
+     * @memberOf foreach
      *
      * @returns {{
      *     checkArguments   : boolean,
@@ -371,5 +373,8 @@
         return processOptions();
     };
 
+    /**
+     * @exports js/partial/foreach
+     */
     return foreach;
 }));
