@@ -15,7 +15,7 @@ This foreach partial automagically detects whether the callback function expects
 similar to [PHP's foreach construct](http://php.net/manual/en/control-structures.foreach.php)
 by **value** or **key-value** distinction.
 
-Works **compressed JavaScript code** too, also compatible with **ECMAScript 6 arrow functions**.
+Works with **compressed JavaScript code** too, also compatible with **ECMAScript 6 arrow functions**.
 
 ## Install
 
@@ -33,28 +33,28 @@ The actual usage of the partial is the same across all environment.
  - AMD (e.g.: RequireJS)
  
  ```javascript
-    define(['js-partial-foreach'], function(foreach) {        
-        // you can now use foreach
-    });
+ define(['js-partial-foreach'], function(foreach) {        
+     // you can now use foreach
+ });
  ```
  
  - CommonJS (e.g.: NodeJS)
  
  ```javascript
-    var foreach = require('js-partial-foreach');
-    
-    // you can now use foreach
+ var foreach = require('js-partial-foreach');
+ 
+ // you can now use foreach
   ```
  
  - Browser
  
  ```javascript
-    // load the source from "node_modules/js-partial-foreach/dist/js-partial-foreach.js" - for development
-    // or from "node_modules/js-partial-foreach/dist/js-partial-foreach.min.js" - for production
+ // load the source from "node_modules/js-partial-foreach/dist/js-partial-foreach.js" - for development
+ // or from "node_modules/js-partial-foreach/dist/js-partial-foreach.min.js" - for production
  
-    var foreach = js_partial_foreach; // it is available in the global namespace
-    
-    // you can now use foreach
+ var foreach = js_partial_foreach; // it is available in the global namespace
+ 
+ // you can now use foreach
   ```
 
 ## Usage - After Initialization
@@ -62,81 +62,81 @@ The actual usage of the partial is the same across all environment.
  - With arrays
  
  ```javascript
-     var array = [1, 2, 3, 4, 5];
+ var array = [1, 2, 3, 4, 5];
      
-     foreach(
-         array,
-         function(value) {
-             console.log(value); // 1 .. 5
-         }
-     );
+ foreach(
+     array,
+     function(value) {
+         console.log(value); // 1 .. 5
+     }
+ );
      
-     foreach(
-         array,
-         function(key, value) {
-             console.log(key + ':' + value); // 0:1 .. 4:5
-         }
-     );
+ foreach(
+     array,
+     function(key, value) {
+         console.log(key + ':' + value); // 0:1 .. 4:5
+     }
+ );
  ```
  
  - With objects
  
  ```javascript
-     // for objects
-     var object = {
-         a : 1,
-         b : 2,
-         c : 3,
-         d : 4,
-         e : 5
-     };
+ // for objects
+ var object = {
+     a : 1,
+     b : 2,
+     c : 3,
+     d : 4,
+     e : 5
+ };
      
-     foreach(
-         object,
-         function(value) {
-             console.log(value); // 1 .. 5
-         }
-     );
+ foreach(
+     object,
+     function(value) {
+         console.log(value); // 1 .. 5
+     }
+ );
        
-     foreach(
-         object,
-         function(key, value) {
-             console.log(key + ':' + value); // a:1 .. e:5
-         }
-     );
+ foreach(
+     object,
+     function(key, value) {
+         console.log(key + ':' + value); // a:1 .. e:5
+     }
+ );
  ```
 
  - With ES6 arrow functions
  
  ```javascript
-    var array = [1, 2, 3, 4, 5];
+ var array = [1, 2, 3, 4, 5];
     
-    foreach(
-        array,
-        (value) => {
-            console.log(value); // 1 .. 5
-        }
-    );
+ foreach(
+     array,
+     (value) => {
+         console.log(value); // 1 .. 5
+     }
+ );
     
-    foreach(
-        array,
-        (key, value) => {
-            console.log(key + ':' + value); // 0:1 .. 4:5
-        }
-    );
+ foreach(
+     array,
+     (key, value) => {
+         console.log(key + ':' + value); // 0:1 .. 4:5
+     }
+ );
  ```
 
  - With strings
  
  ```javascript
-    var string = 'abcdefgh';
+ var string = 'abcdefgh';
     
-    foreach(
-        string,
-        function(char) {
-            console.log(char); // 'a' .. 'h'
-        }
-    );
+ foreach(
+     string,
+     function(char) {
+         console.log(char); // 'a' .. 'h'
+     }
+ );
  ```
 
 ## Documentation

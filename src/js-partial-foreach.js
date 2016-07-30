@@ -352,9 +352,9 @@
      * @example
      * var options = foreach.getOptions();
      * // options now will contain:
-     * // options.checkArguments
-     * // options.checkOwnProperty
-     * // options.castArrayIndex
+     * //  - options.checkArguments
+     * //  - options.checkOwnProperty
+     * //  - options.castArrayIndex
      */
     foreach.getOptions = function() {
         return processOptions();
