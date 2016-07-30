@@ -71,7 +71,6 @@
          * @memberOf js/partial/foreach
          *
          * @property {boolean} [checkArguments=true]
-         *
          * Determines whether "foreach" should check the number of arguments in the callback function.
          * If it is enabled and:
          *   - when the callback function has one argument, "foreach" will
@@ -88,7 +87,6 @@
          * the second will be the actual **value** of the container object.
          *
          * @property {boolean} [checkOwnProperty=true]
-         *
          * Determines whether "foreach" should check whether the container has
          * the current key as an own property via containerObject.hasOwnProperty(key).
          *
@@ -98,7 +96,6 @@
          * If it is disabled, every key => value of the container object will be passed to the callback function.
          *
          * @property {boolean} [castArrayIndex=true]
-         *
          * Determines whether "foreach" should cast the indices of the array-like container object
          * to integers (in {number}).
          *
