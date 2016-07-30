@@ -3,7 +3,7 @@
  *           by differentiating whether the callback function expects a value or a pair of key=>value.
  *
  * @module js/partial/foreach
- * @version 1.0.0
+ * @version 1.0.1
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license MIT
