@@ -1,6 +1,6 @@
 {
   "name": "js-partial-foreach",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A partial to provide a better foreach capability similar to PHP's foreach construct by differentiating whether the callback function expects a value or a pair of key-value.",
   "main": "dist/js-partial-foreach.js",
   "license": "MIT",
