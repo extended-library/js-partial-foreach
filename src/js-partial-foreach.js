@@ -62,7 +62,7 @@
          */
         ARGUMENT_CHECK_PATTERN = /\(.*,.*\)/,
 
-    // Global config options
+    // Config options
 
         /**
          * @typedef {Object}
@@ -70,39 +70,42 @@
          * @static
          * @memberOf js/partial/foreach
          *
-         * @property {boolean} [checkArguments=true]
-         *   Determines whether "foreach" should check the number of arguments in the callback function.
-         *   If it is enabled and:
-         *     - when the callback function has one argument, "foreach" will
-         *       pass one argument to the callback function, which will contain
-         *       the actual **value** of the container object.
+         * @property {boolean} [checkArguments=true] -
          *
-         *     - when the callback function has two arguments, "foreach" will
-         *       pass two arguments to the callback function, the first will be
-         *       the actual **key**, the second will be the
-         *       actual **value** of the container object.
+         * Determines whether "foreach" should check the number of arguments in the callback function.
+         * If it is enabled and:
+         *   - when the callback function has one argument, "foreach" will
+         *     pass one argument to the callback function, which will contain
+         *     the actual **value** of the container object.
          *
-         *   If it is disabled, always two arguments will be passed to the
-         *   callback function, the first will be the actual **key**,
-         *   the second will be the actual **value** of the container object.
+         *   - when the callback function has two arguments, "foreach" will
+         *     pass two arguments to the callback function, the first will be
+         *     the actual **key**, the second will be the
+         *     actual **value** of the container object.
          *
-         * @property {boolean} [checkOwnProperty=true]
-         *   Determines whether "foreach" should check whether the container has
-         *   the current key as an own property via containerObject.hasOwnProperty(key).
+         * If it is disabled, always two arguments will be passed to the
+         * callback function, the first will be the actual **key**,
+         * the second will be the actual **value** of the container object.
          *
-         *   If it is enabled, only those key => value pairs will be passed to the callback function,
-         *   which are own properties of the container object.
+         * @property {boolean} [checkOwnProperty=true] -
          *
-         *   If it is disabled, every key => value of the container object will be passed to the callback function.
+         * Determines whether "foreach" should check whether the container has
+         * the current key as an own property via containerObject.hasOwnProperty(key).
          *
-         * @property {boolean} [castArrayIndex=true]
-         *   Determines whether "foreach" should cast the indices of the array-like container object
-         *   to integers (in {number}).
+         * If it is enabled, only those key => value pairs will be passed to the callback function,
+         * which are own properties of the container object.
          *
-         *   If it is enabled, when and **only when** two arguments (key => value) will be passed to
-         *   the callback function, the first argument (key) will be cast to an integer (in {number}).
+         * If it is disabled, every key => value of the container object will be passed to the callback function.
          *
-         *   If it is disabled, no change and/or cast will occur on the first (key) argument.
+         * @property {boolean} [castArrayIndex=true] -
+         * 
+         * Determines whether "foreach" should cast the indices of the array-like container object
+         * to integers (in {number}).
+         *
+         * If it is enabled, when and **only when** two arguments (key => value) will be passed to
+         * the callback function, the first argument (key) will be cast to an integer (in {number}).
+         *
+         * If it is disabled, no change and/or cast will occur on the first (key) argument.
          */
         config = {
             checkArguments   : true,
@@ -166,9 +169,9 @@
      * @function processOptions
      * @memberOf js/partial/foreach
      *
-     * @param {configOptions} [options]   The object, which contains the config options.
-     * @param {boolean}       [setGlobal] Whether the passed config options should change
-     *                                    the global config options for "foreach".
+     * @param {config}  [options]   The object, which contains the config options.
+     * @param {boolean} [setGlobal] Whether the passed config options should change
+     *                              the global config options for "foreach".
      *
      * @returns {config} The valid, changeable config options with their actual, current value.
      */
@@ -220,22 +223,10 @@
      * @public
      * @function foreach
      *
-     * @param {*}        object   The container object.
-     * @param {function} callback The callback function to receive key or key=>value arguments.
-     *
-     * @param {object}  [options]                     The object, which contains the config options.
-     *
-     * @param {boolean} [options.checkArguments=true] Sets whether "foreach" should check the number of arguments
-     *                                                in the callback function. For detailed description,
-     *                                                check: {@link checkArguments}
-     *
-     * @param {boolean} [options.checkOwnProperty=true] Sets whether "foreach" should only pass the key or
-     *                                                  key=>value pairs, if they pass the .hasOwnProperty(...) test.
-     *                                                  For detailed description, check: {@link checkOwnProperty}
-     *
-     * @param {boolean} [options.castArrayIndex=true] Sets whether "foreach" should cast the indices (key) of the
-     *                                                array-like container object to integers.
-     *                                                For detailed description, check: {@link castArrayIndex}
+     * @param {*}        object    The container object.
+     * @param {function} callback  The callback function to receive key or key=>value arguments.
+     * @param {config}   [options] The object, which contains the config options.
+
      * @example
      * // for arrays
      * var array = [1, 2, 3, 4, 5];
@@ -372,7 +363,7 @@
      * @function setOptions
      * @memberOf js/partial/foreach
      *
-     * @param {configOptions} [options] The object, which contains the config options.
+     * @param {config} [options] The object, which contains the config options.
      *
      * @return {void}
      */
@@ -387,7 +378,7 @@
      * @function getOptions
      * @memberOf js/partial/foreach
      *
-     * @returns {configOptions} The valid, changeable config options with their actual, current value.
+     * @returns {config} The valid, changeable config options with their actual, current value.
      */
     foreach.getOptions = function() {
         return processOptions();
