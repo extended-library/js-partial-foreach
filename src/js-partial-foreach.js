@@ -6,7 +6,7 @@
  * @version 1.0.3
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
- * @license MIT
+ * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
  */
 
 /**
@@ -75,6 +75,7 @@
          * If it is disabled, always two arguments will be passed to the callback function,
          * the first will be the actual **key**, the second will be the actual **value** of the container object.
          *
+         * @private
          * @type {boolean}
          * @default true
          */
@@ -89,6 +90,7 @@
          *
          * If it is disabled, every key => value of the container object will be passed to the callback function.
          *
+         * @private
          * @type {boolean}
          * @default true
          */
@@ -103,6 +105,7 @@
          *
          * If it is disabled, no change and/or cast will occur on the first (key) argument.
          *
+         * @private
          * @type {boolean}
          * @default true
          */
@@ -110,6 +113,9 @@
 
     /**
      * Processes the config options of the "foreach" partial.
+     *
+     * @private
+     * @function processOptions
      *
      * @param {object}  [options]   The object, which contains the config options.
      * @param {boolean} [setGlobal] Whether the passed config options should change
