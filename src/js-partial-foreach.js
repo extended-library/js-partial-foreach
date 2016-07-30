@@ -63,12 +63,32 @@
     // Global config options
 
         /**
-         * @typedef Options
-         * @type Object
-         * @property {boolean} [checkArguments=true] checkArguments
-         * @property {boolean} [checkOwnProperty=true] checkOwnProperty
-         * @property {boolean} [castArrayIndex=true] castArrayIndex
+         * @typedef configOptions
          */
+        configOptions = {
+            /**
+             * @property {boolean} [checkArguments=true]
+             * @memberOf configOptions
+             * @description Determines whether "foreach" should check the number of arguments in the callback function.
+             *
+             * If it is enabled and:
+             *     - when the callback function has one argument, "foreach" will
+             *       pass one argument to the callback function, which will contain
+             *       the actual **value** of the container object.
+             *
+             *     - when the callback function has two arguments, "foreach" will
+             *       pass two arguments to the callback function, the first will be
+             *       the actual **key**, the second will be the
+             *       actual **value** of the container object.
+             *
+             * If it is disabled, always two arguments will be passed to the
+             * callback function, the first will be the actual **key**,
+             * the second will be the actual **value** of the container object.
+             */
+            checkArguments   : true,
+            checkOwnProperty : true,
+            castArrayIndex   : true
+        },
 
         /**
          * Determines whether "foreach" should check the number of arguments in the callback function.
@@ -125,27 +145,11 @@
      * @private
      * @function processOptions
      *
-     * @param {object}  [options]   The object, which contains the config options.
-     * @param {boolean} [setGlobal] Whether the passed config options should change
-     *                              the global config options for "foreach".
+     * @param {configOptions} [options]   The object, which contains the config options.
+     * @param {boolean}       [setGlobal] Whether the passed config options should change
+     *                                    the global config options for "foreach".
      *
-     * @param {boolean} [options.checkArguments=true] Sets whether "foreach" should check the number of arguments
-     *                                                in the callback function. For detailed description,
-     *                                                check: {@link checkArguments}
-     *
-     * @param {boolean} [options.checkOwnProperty=true] Sets whether "foreach" should only pass the key or
-     *                                                  key=>value pairs, if they pass the .hasOwnProperty(...) test.
-     *                                                  For detailed description, check: {@link checkOwnProperty}
-     *
-     * @param {boolean} [options.castArrayIndex=true] Sets whether "foreach" should cast the indices (key) of the
-     *                                                array-like container object to integers.
-     *                                                For detailed description, check: {@link castArrayIndex}
-     *
-     * @returns {{
-     *     checkArguments   : boolean,
-     *     checkOwnProperty : boolean,
-     *     castArrayIndex   : boolean
-     * }} The valid, changeable config options with their actual, current value.
+     * @returns {configOptions} The valid, changeable config options with their actual, current value.
      */
     function processOptions(options, setGlobal) {
         var checkArgs = checkArguments,
