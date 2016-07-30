@@ -116,10 +116,10 @@
          * @static
          * @memberOf js/partial/foreach
          */
-        config = {
+        config2 = {
             /**
-             * @property {boolean} [checkArguments=true] -
-             * 
+             * @property {boolean} [config2.checkArguments=true] -
+             *
              * Determines whether "foreach" should check the number of arguments in the callback function.
              * If it is enabled and:
              *  - when the callback function has one argument, "foreach" will
@@ -138,7 +138,7 @@
             checkArguments   : true,
 
             /**
-             * @property {boolean} [checkOwnProperty=true] -
+             * @property {boolean} [config2.checkOwnProperty=true] -
              *
              * Determines whether "foreach" should check whether the container has
              * the current key as an own property via containerObject.hasOwnProperty(key).
@@ -151,7 +151,7 @@
             checkOwnProperty : true,
 
             /**
-             * @property {boolean} [castArrayIndex=true] -
+             * @property {boolean} [config2.castArrayIndex=true] -
              *
              * Determines whether "foreach" should cast the indices of the array-like container object
              * to integers (in {number}).
