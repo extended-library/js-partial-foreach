@@ -78,7 +78,7 @@ The actual usage of the partial is the same across all environment.
      );
  ```
  
- - With object
+ - With objects
  
  ```javascript
      // for objects
