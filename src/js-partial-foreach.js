@@ -63,6 +63,14 @@
     // Global config options
 
         /**
+         * @typedef Options
+         * @type Object
+         * @property {boolean} [checkArguments=true] checkArguments
+         * @property {boolean} [checkOwnProperty=true] checkOwnProperty
+         * @property {boolean} [castArrayIndex=true] castArrayIndex
+         */
+
+        /**
          * Determines whether "foreach" should check the number of arguments in the callback function.
          *
          * If it is enabled and:
@@ -335,7 +343,7 @@
      * Sets the global config options for "foreach" partial.
      *
      * @function setOptions
-     * @memberOf foreach
+     * @memberOf js/partial/foreach/foreach
      *
      * @param {object}  [options]                     The object, which contains the config options.
      *
