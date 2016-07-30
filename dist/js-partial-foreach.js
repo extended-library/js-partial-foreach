@@ -5,7 +5,7 @@
  * @module js/partial/foreach
  * @type {function}
  *
- * @version 1.0.4
+ * @version 1.0.5
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
@@ -352,9 +352,9 @@
      * @example
      * var options = foreach.getOptions();
      * // options now will contain:
-     * // options.checkArguments
-     * // options.checkOwnProperty
-     * // options.castArrayIndex
+     * //  - options.checkArguments
+     * //  - options.checkOwnProperty
+     * //  - options.castArrayIndex
      */
     foreach.getOptions = function() {
         return processOptions();
