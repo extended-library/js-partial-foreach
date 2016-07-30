@@ -65,7 +65,7 @@
     // Global config options
 
         /**
-         * @typedef {Object} config
+         * @typedef {Object}
          *
          * @static
          * @memberOf js/partial/foreach
@@ -105,20 +105,8 @@
          *   If it is disabled, no change and/or cast will occur on the first (key) argument.
          */
         config = {
-
-            /**
-             * @see {@link config.checkArguments}
-             */
             checkArguments   : true,
-
-            /**
-             * @see {@link config.checkOwnProperty}
-             */
             checkOwnProperty : true,
-
-            /**
-             * @see {@link config.castArrayIndex}
-             */
             castArrayIndex   : true
         },
 
@@ -233,7 +221,7 @@
      * @param {boolean}       [setGlobal] Whether the passed config options should change
      *                                    the global config options for "foreach".
      *
-     * @returns {configOptions} The valid, changeable config options with their actual, current value.
+     * @returns {config} The valid, changeable config options with their actual, current value.
      */
     function processOptions(options, setGlobal) {
         var checkArgs = checkArguments,
