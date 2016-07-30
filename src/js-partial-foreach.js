@@ -3,6 +3,8 @@
  *           by differentiating whether the callback function expects a value or a pair of key=>value.
  *
  * @module js/partial/foreach
+ * @type {function}
+ *
  * @version 1.0.3
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
@@ -197,6 +199,7 @@
      * depending of the number of arguments, a key or a pair of key=>value will be sent to the callback function.
      * The container object can be an array, object, string or any array-like object, which has .length property.
      *
+     * @public
      * @function foreach
      *
      * @param {*}        object   The container object.
