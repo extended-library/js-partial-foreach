@@ -1,0 +1,52 @@
+{
+  "name": "js-partial-foreach",
+  "version": "0.0.0",
+  "description": "A partial to provide a better foreach capability similar to PHP's foreach construct by differentiating whether the callback function expects a value or a pair of key=>value.",
+  "main": "dist/js-partial-foreach.js",
+  "license": "MIT",
+  "homepage": "https://github.com/jsopenstd/js-partial-foreach",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsopenstd/js-partial-foreach.git"
+  },
+  "author": {
+    "name": "Richard King",
+    "email": "richrdkng@gmail.com",
+    "url": "https://github.com/richrdkng"
+  },
+  "scripts": {
+    "g": "gulp --gulpfile scripts/gulp/main.js",
+    "gulp": "npm run g",
+    "build": "npm run g -- tasks/build",
+    "test": "npm run g -- tasks/test",
+    "ci": "npm run g -- tasks/ci",
+    "coveralls": "coveralls < cov/lcov.info"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "coveralls": "^2.11.11",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-header": "^1.8.7",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.5",
+    "gulp-uglify": "^1.5.4",
+    "merge2": "^1.0.2",
+    "semver": "^5.3.0"
+  },
+  "keywords": [
+    "js",
+    "partial",
+    "foreach",
+    "iterator",
+    "jsopenstd",
+    "amd",
+    "commonjs",
+    "browser",
+    "umd"
+  ]
+}

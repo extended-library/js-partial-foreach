@@ -1,0 +1,17 @@
+# IntelliJ project directory
+.idea/
+
+# Vagrant VM directory
+.vagrant/
+
+# Node project dependencies
+/node_modules/
+
+# Code coverage report
+/cov/
+
+# Logs
+/npm-debug.log
+
+# Required data for publishing project
+/.publish.json
