@@ -10,13 +10,11 @@
 ## Synopsis
 
 A [partial][partial-link] to provide a **better foreach capability** in [UMD][umd-link].
-This foreach partial automagically detects whether the handler function expects **one or multiple arguments** 
+This foreach partial automagically detects whether the callback function expects **one or multiple arguments** 
 similar to [PHP's foreach construct](http://php.net/manual/en/control-structures.foreach.php)
-by **value** and **key => value** distinction.
+by **value** or **key-value** distinction.
 
-Works with:
- - **compressed JavaScript code** too, 
- - also compatible with **ECMAScript 6 arrow functions**.
+Works **compressed JavaScript code** too, also compatible with **ECMAScript 6 arrow functions**.
 
 ## Install
 
