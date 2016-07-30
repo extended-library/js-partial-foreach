@@ -98,7 +98,7 @@
          * If it is disabled, every key => value of the container object will be passed to the callback function.
          *
          * @property {boolean} [castArrayIndex=true] -
-         * 
+         *
          * Determines whether "foreach" should cast the indices of the array-like container object
          * to integers (in {number}).
          *
@@ -169,9 +169,9 @@
      * @function processOptions
      * @memberOf js/partial/foreach
      *
-     * @param {config}  [options]   The object, which contains the config options.
-     * @param {boolean} [setGlobal] Whether the passed config options should change
-     *                              the global config options for "foreach".
+     * @param {config}  [options]         The object, which contains the config options.
+     * @param {boolean} [setGlobal=false] Whether the passed config options should change
+     *                                    the global config options for "foreach".
      *
      * @returns {config} The valid, changeable config options with their actual, current value.
      */
@@ -226,7 +226,9 @@
      * @param {*}        object    The container object.
      * @param {function} callback  The callback function to receive key or key=>value arguments.
      * @param {config}   [options] The object, which contains the config options.
-
+     *
+     * @return {void}
+     *
      * @example
      * // for arrays
      * var array = [1, 2, 3, 4, 5];
@@ -297,8 +299,6 @@
      *         console.log(char); // 'a' .. 'h'
      *     }
      * );
-     *
-     * @return {void}
      */
     function foreach(object, callback, options) {
         var numArgs = TWO_ARGUMENTS,
@@ -366,19 +366,34 @@
      * @param {config} [options] The object, which contains the config options.
      *
      * @return {void}
+     *
+     * @example
+     * // after setOptions(...), the global config of "foreach" will be changed
+     * foreach.setOptions({
+     *     checkArguments   : true,
+     *     checkOwnProperty : false,
+     *     castArrayIndex   : false
+     * });
      */
     foreach.setOptions = function(options) {
         processOptions(options, true);
     };
 
     /**
-     * Gets the global config options for "foreach" partial.
+     * Returns the global config options for "foreach" partial.
      *
      * @static
      * @function getOptions
      * @memberOf js/partial/foreach
      *
      * @returns {config} The valid, changeable config options with their actual, current value.
+     *
+     * @example
+     * var options = foreach.getOptions();
+     * // options now will contain:
+     * // options.checkArguments
+     * // options.checkOwnProperty
+     * // options.castArrayIndex
      */
     foreach.getOptions = function() {
         return processOptions();
