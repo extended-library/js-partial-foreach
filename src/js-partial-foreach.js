@@ -197,72 +197,72 @@
      *                                                array-like container object to integers.
      *                                                For detailed description, check: {@link castArrayIndex}
      * @example
-     *     // for arrays
-     *     var array = [1, 2, 3, 4, 5];
+     * // for arrays
+     * var array = [1, 2, 3, 4, 5];
      *
-     *     foreach(
-     *         array,
-     *         function(value) {
-     *             console.log(value); // 1 .. 5
-     *         }
-     *     );
+     * foreach(
+     *     array,
+     *     function(value) {
+     *         console.log(value); // 1 .. 5
+     *     }
+     * );
      *
-     *     foreach(
-     *         array,
-     *         function(key, value) {
-     *             console.log(key + ':' + value); // 0:1 .. 4:5
-     *         }
-     *     );
+     * foreach(
+     *     array,
+     *     function(key, value) {
+     *         console.log(key + ':' + value); // 0:1 .. 4:5
+     *     }
+     * );
      *
-     *     // for objects
-     *     var object = {
-     *         a : 1,
-     *         b : 2,
-     *         c : 3,
-     *         d : 4,
-     *         e : 5
-     *     };
+     * // for objects
+     * var object = {
+     *     a : 1,
+     *     b : 2,
+     *     c : 3,
+     *     d : 4,
+     *     e : 5
+     * };
      *
-     *     foreach(
-     *         object,
-     *         function(value) {
-     *             console.log(value); // 1 .. 5
-     *         }
-     *     );
+     * foreach(
+     *     object,
+     *     function(value) {
+     *         console.log(value); // 1 .. 5
+     *     }
+     * );
      *
-     *     foreach(
-     *         object,
-     *         function(key, value) {
-     *             console.log(key + ':' + value); // a:1 .. e:5
-     *         }
-     *     );
+     * foreach(
+     *     object,
+     *     function(key, value) {
+     *         console.log(key + ':' + value); // a:1 .. e:5
+     *     }
+     * );
      *
-     *     // ES6 arrow function
-     *     var array = [1, 2, 3, 4, 5];
+     * // ES6 arrow function
+     * var array = [1, 2, 3, 4, 5];
      *
-     *     foreach(
-     *         array,
-     *         (value) => {
-     *             console.log(value); // 1 .. 5
-     *         }
-     *     );
+     * foreach(
+     *     array,
+     *     (value) => {
+     *         console.log(value); // 1 .. 5
+     *     }
+     * );
      *
-     *     foreach(
-     *         array,
-     *         (key, value) => {
-     *             console.log(key + ':' + value); // 0:1 .. 4:5
-     *         }
-     *     );
+     * foreach(
+     *     array,
+     *     (key, value) => {
+     *         console.log(key + ':' + value); // 0:1 .. 4:5
+     *     }
+     * );
      *
-     *     // for strings
-     *     var string = 'abcdefgh';
+     * // for strings
+     * var string = 'abcdefgh';
      *
-     *     foreach(
-     *         string,
-     *         function(char) {
-     *             console.log(char); // 'a' .. 'h'
-     *         }
-     *     );
+     * foreach(
+     *     string,
+     *     function(char) {
+     *         console.log(char); // 'a' .. 'h'
+     *     }
+     * );
      *
      * @return {void}
      */
