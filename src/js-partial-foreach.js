@@ -63,7 +63,7 @@
     // Global config options
 
         /**
-         * @type {object} configOptions
+         * @typedef {ConfigOptions} configOptions
          * @memberOf js/partial/foreach
          */
         configOptions = {
@@ -144,6 +144,7 @@
      *
      * @private
      * @function processOptions
+     * @memberOf js/partial/foreach
      *
      * @param {configOptions} [options]   The object, which contains the config options.
      * @param {boolean}       [setGlobal] Whether the passed config options should change
@@ -346,8 +347,9 @@
     /**
      * Sets the global config options for "foreach" partial.
      *
+     * @static
      * @function setOptions
-     * @memberOf js/partial/foreach/foreach
+     * @memberOf js/partial/foreach
      *
      * @param {configOptions} [options] The object, which contains the config options.
      *
@@ -360,8 +362,9 @@
     /**
      * Gets the global config options for "foreach" partial.
      *
+     * @static
      * @function getOptions
-     * @memberOf foreach
+     * @memberOf js/partial/foreach
      *
      * @returns {configOptions} The valid, changeable config options with their actual, current value.
      */
