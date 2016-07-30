@@ -72,7 +72,8 @@
          */
         config = {
             /**
-             * @property {boolean} [checkArguments=true]
+             * @type {boolean} [checkArguments]
+             * @default true
              *
              * Determines whether "foreach" should check the number of arguments in the callback function.
              * If it is enabled and:
