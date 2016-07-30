@@ -63,12 +63,12 @@
     // Global config options
 
         /**
-         * @typedef configOptions
+         * @type {object} configOptions
+         * @memberOf js/partial/foreach
          */
         configOptions = {
             /**
-             * @property {boolean} [checkArguments=true]
-             * @memberOf configOptions
+             * @type {boolean} [checkArguments=true]
              * @description Determines whether "foreach" should check the number of arguments in the callback function.
              *
              * If it is enabled and:
@@ -349,19 +349,7 @@
      * @function setOptions
      * @memberOf js/partial/foreach/foreach
      *
-     * @param {object}  [options]                     The object, which contains the config options.
-     *
-     * @param {boolean} [options.checkArguments=true] Sets whether "foreach" should check the number of arguments
-     *                                                in the callback function. For detailed description,
-     *                                                check: {@link checkArguments}
-     *
-     * @param {boolean} [options.checkOwnProperty=true] Sets whether "foreach" should only pass the key or
-     *                                                  key=>value pairs, if they pass the .hasOwnProperty(...) test.
-     *                                                  For detailed description, check: {@link checkOwnProperty}
-     *
-     * @param {boolean} [options.castArrayIndex=true] Sets whether "foreach" should cast the indices (key) of the
-     *                                                array-like container object to integers.
-     *                                                For detailed description, check: {@link castArrayIndex}
+     * @param {configOptions} [options] The object, which contains the config options.
      *
      * @return {void}
      */
@@ -375,11 +363,7 @@
      * @function getOptions
      * @memberOf foreach
      *
-     * @returns {{
-     *     checkArguments   : boolean,
-     *     checkOwnProperty : boolean,
-     *     castArrayIndex   : boolean
-     * }} The valid, changeable config options with their actual, current value.
+     * @returns {configOptions} The valid, changeable config options with their actual, current value.
      */
     foreach.getOptions = function() {
         return processOptions();
