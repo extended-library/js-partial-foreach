@@ -5,6 +5,7 @@
 [![Coveralls - Code Coverage Status][cov-badge]][cov-url]
 [![David - Dependencies][dep-badge]][dep-url]
 [![David - DevDependencies][dev-dep-badge]][dev-dep-url]
+[![Doclets][doclets-badge]][doclets-url]
 [![Gitter - Repository Chat][chat-badge]][chat-url]
 
 ## Synopsis
@@ -140,8 +141,12 @@ The actual usage of the partial is the same across all environment.
 
 ## Documentation
 
-Check the source [here](https://github.com/jsopenstd/js-partial-foreach/blob/master/src/js-partial-foreach.js)
-since it's very well documented.
+Check the source 
+[here](https://github.com/jsopenstd/js-partial-foreach/blob/master/src/js-partial-foreach.js)
+since it's very well documented. Also you can find the rendered jsDoc documentation on 
+[Doclets.io](https://doclets.io/jsopenstd/js-partial-foreach/master). 
+
+Have fun! ;)
 
 ## Issues
 
@@ -187,6 +192,9 @@ Any means of support is beneficial and helpful.
 
 [dev-dep-badge]: https://david-dm.org/jsopenstd/js-partial-foreach/dev-status.svg
 [dev-dep-url]:   https://david-dm.org/jsopenstd/js-partial-foreach#info=devDependencies
+
+[doclets-badge]: https://img.shields.io/badge/style-on_doclets-brightgreen.svg?style=flat-square&label=docs
+[doclets-url]:   https://doclets.io/jsopenstd/js-partial-foreach/master   
 
 [chat-badge]:    https://badges.gitter.im/jsopenstd/js-partial-foreach.svg
 [chat-url]:      https://gitter.im/jsopenstd/js-partial-foreach?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
