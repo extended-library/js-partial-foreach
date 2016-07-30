@@ -220,6 +220,7 @@
      *     }
      * );
      *
+     * @example
      * // for objects
      * var object = {
      *     a : 1,
@@ -243,6 +244,7 @@
      *     }
      * );
      *
+     * @example
      * // ES6 arrow function
      * var array = [1, 2, 3, 4, 5];
      *
@@ -260,6 +262,7 @@
      *     }
      * );
      *
+     * @example
      * // for strings
      * var string = 'abcdefgh';
      *
