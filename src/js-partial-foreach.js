@@ -67,7 +67,7 @@
         /**
          * The config object of "foreach", which holds the global configuration.
          *
-         * @typedef {Object}
+         * @typedef {Object} config
          *
          * @static
          * @memberOf js/partial/foreach
@@ -179,6 +179,13 @@
      * @param {*}        object    The container object.
      * @param {function} callback  The callback function to receive key or key=>value arguments.
      * @param {config}   [options] The object, which contains the config options.
+     *
+     *                             When you change config options by passing this object, it will **only change**
+     *                             the behaviour of "foreach" **for the current run (local)** and
+     *                             **does not affect the global config options**, hence **it is global-safe**.
+     *
+     *                             If you want to change to global config options, use **foreach.setOptions**.
+     *                             For details, [check]{@link setOptions}.
      *
      * @return {void}
      *
