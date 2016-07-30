@@ -65,7 +65,10 @@
     // Config options
 
         /**
-         * The config object of "foreach", which holds the global configuration.
+         * The config typedef of "foreach", which describes possible configurations.
+         *
+         * This typedef is used internally, but it can be used also as a **helper guide, when changing configurations**.
+         * Do not worry about incidentally changing the internal or global options of "foreach" by using this typedef.
          *
          * @typedef {Object} config
          *
