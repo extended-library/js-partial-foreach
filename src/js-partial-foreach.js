@@ -5,7 +5,7 @@
  * @module js/partial/foreach
  * @type {function}
  *
- * @version 1.0.3
+ * @version 1.0.4
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
