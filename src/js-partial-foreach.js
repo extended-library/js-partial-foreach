@@ -65,28 +65,28 @@
     // Global config options
 
         /**
-         * @typedef {ConfigOptions} configOptions
+         * @typedef {Object} config
+         * 
+         * @static
+         *
+         * @property {boolean} [checkArguments=true] Determines whether "foreach" should check the number of arguments in the callback function.
+         *                                           If it is enabled and:
+         *                                               - when the callback function has one argument, "foreach" will
+         *                                                 pass one argument to the callback function, which will contain
+         *                                                 the actual **value** of the container object.
+         *
+         *                                               - when the callback function has two arguments, "foreach" will
+         *                                                 pass two arguments to the callback function, the first will be
+         *                                                 the actual **key**, the second will be the
+         *                                                 actual **value** of the container object.
+         *
+         *                                           If it is disabled, always two arguments will be passed to the
+         *                                           callback function, the first will be the actual **key**,
+         *                                           the second will be the actual **value** of the container object.
+         *
          * @memberOf js/partial/foreach
          */
-        configOptions = {
-            /**
-             * @type {boolean} [checkArguments=true]
-             * @description Determines whether "foreach" should check the number of arguments in the callback function.
-             *
-             * If it is enabled and:
-             *     - when the callback function has one argument, "foreach" will
-             *       pass one argument to the callback function, which will contain
-             *       the actual **value** of the container object.
-             *
-             *     - when the callback function has two arguments, "foreach" will
-             *       pass two arguments to the callback function, the first will be
-             *       the actual **key**, the second will be the
-             *       actual **value** of the container object.
-             *
-             * If it is disabled, always two arguments will be passed to the
-             * callback function, the first will be the actual **key**,
-             * the second will be the actual **value** of the container object.
-             */
+        config = {
             checkArguments   : true,
             checkOwnProperty : true,
             castArrayIndex   : true
